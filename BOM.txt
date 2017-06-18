@@ -1,0 +1,11 @@
+For Central device, we need:
+- Raspberry Pi 1 B+ or greater. (This project does not require a lot of resources)
+- Adafruit Permaproto Pi HAT! (Optional, you can use normal protoboard)
+- 16x2 LCD with I2C controller (Using less pins on Raspberry)
+- DHT 11 temperature and humidity sensor (Good results for indoor (0-50ºC), but bad for outdoor. I recommend DHT22 for outdoor (greater temperature range).
+
+For wireless thermopods:
+- ESP01
+- DHT11 (or DHT22)
+- 1xAA battery holder (Draft)
+- Boost converter to 3.3V
