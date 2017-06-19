@@ -1,4 +1,4 @@
-update=lun 12 jun 2017 08:42:19 CEST
+update=lun 19 jun 2017 09:02:37 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -57,5 +57,7 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=/home/angel/kicad/libraries/sensors/sensors
+LibName31=/home/angel/kicad/libraries/switches/switches
+LibName32=/home/angel/kicad/libraries/relays/relays
 [general]
 version=1

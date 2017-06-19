@@ -29,6 +29,8 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:sensors
+LIBS:switches
+LIBS:relays
 LIBS:Central device-cache
 EELAYER 25 0
 EELAYER END
@@ -208,4 +210,15 @@ Wire Notes Line
 	9750 1800 6050 1800
 Text Notes 6100 1750 0    60   ~ 0
 These two components are already unified in one single product.\nConnection between them come from my imagination.\n(Need help to get the good connection).
+$Comp
+L FINDER-32.21-x000 K?
+U 1 1 594776D9
+P 3450 5750
+F 0 "K?" H 3900 5900 50  0000 L CNN
+F 1 "FINDER-32.21-x000" H 3900 5800 50  0000 L CNN
+F 2 "Relays_THT:Relay_SPST_Finder_32.21-x300" H 4720 5720 50  0001 C CNN
+F 3 "" H 3450 5750 50  0001 C CNN
+	1    3450 5750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
