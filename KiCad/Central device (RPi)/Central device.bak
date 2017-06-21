@@ -29,6 +29,8 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:sensors
+LIBS:switches
+LIBS:relays
 LIBS:Central device-cache
 EELAYER 25 0
 EELAYER END
@@ -120,7 +122,7 @@ Wire Wire Line
 Wire Wire Line
 	2600 3900 2650 3900
 Wire Wire Line
-	3650 4300 3650 4550
+	3650 4300 3650 4850
 Wire Wire Line
 	6600 4550 6600 4500
 Wire Wire Line
@@ -208,4 +210,73 @@ Wire Notes Line
 	9750 1800 6050 1800
 Text Notes 6100 1750 0    60   ~ 0
 These two components are already unified in one single product.\nConnection between them come from my imagination.\n(Need help to get the good connection).
+$Comp
+L FINDER-32.21-x000 K?
+U 1 1 594776D9
+P 3450 5750
+F 0 "K?" H 3900 5900 50  0000 L CNN
+F 1 "FINDER-32.21-x000" H 3900 5800 50  0000 L CNN
+F 2 "Relays_THT:Relay_SPST_Finder_32.21-x300" H 4720 5720 50  0001 C CNN
+F 3 "" H 3450 5750 50  0001 C CNN
+	1    3450 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_NPN_BCE Q?
+U 1 1 594A1450
+P 2350 5750
+F 0 "Q?" H 2550 5800 50  0000 L CNN
+F 1 "Q_NPN_BCE" H 2550 5700 50  0000 L CNN
+F 2 "" H 2550 5850 50  0000 C CNN
+F 3 "" H 2350 5750 50  0000 C CNN
+	1    2350 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 5950 2450 6400
+Wire Wire Line
+	2450 6400 3250 6400
+Wire Wire Line
+	3250 6400 3250 6050
+Wire Wire Line
+	3250 5450 3250 4850
+Wire Wire Line
+	3250 4850 3650 4850
+Connection ~ 3650 4550
+Wire Wire Line
+	2450 5550 2450 1450
+Wire Wire Line
+	2450 1450 3250 1450
+Wire Wire Line
+	3250 1450 3250 1700
+Wire Wire Line
+	2150 5750 2150 3500
+Wire Wire Line
+	2150 3500 2650 3500
+Wire Wire Line
+	3750 5450 3750 5250
+Wire Wire Line
+	3750 5250 5300 5250
+Wire Wire Line
+	5300 5250 5300 5800
+Wire Wire Line
+	3650 6050 3650 6300
+Wire Wire Line
+	3650 6300 5300 6300
+Wire Wire Line
+	5300 6300 5300 6150
+Text GLabel 5300 5800 2    60   Input ~ 0
+ToHeater
+Text GLabel 5300 6150 2    60   Input ~ 0
+ToHeater
+Wire Notes Line
+	1900 5100 5900 5100
+Wire Notes Line
+	5900 5100 5900 6700
+Wire Notes Line
+	5900 6700 1900 6700
+Wire Notes Line
+	1900 6700 1900 5100
+Text Notes 3750 6850 2    60   ~ 0
+Unified component. Reverse engineered.
 $EndSCHEMATC

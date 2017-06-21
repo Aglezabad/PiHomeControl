@@ -47,10 +47,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Raspberry_Pi_2_3 U?
+L Raspberry_Pi_2_3 RPI1B+
 U 1 1 59353BE3
 P 3550 3000
-F 0 "U?" H 4250 1750 50  0000 C CNN
+F 0 "RPI1B+" H 4250 1750 50  0000 C CNN
 F 1 "Raspberry_Pi_2_3" H 3150 3900 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_2x20" H 4550 4250 50  0001 C CNN
 F 3 "" H 3600 2850 50  0001 C CNN
@@ -91,10 +91,10 @@ Wire Wire Line
 Wire Wire Line
 	2500 3700 2650 3700
 $Comp
-L PCF8574A U?
+L PCF8574A LCDDriver
 U 1 1 5946C7CE
 P 6600 3800
-F 0 "U?" H 6250 4400 50  0000 L CNN
+F 0 "LCDDriver" H 6250 4400 50  0000 L CNN
 F 1 "PCF8574A" H 6700 4400 50  0000 L CNN
 F 2 "" H 6600 3800 50  0000 C CNN
 F 3 "" H 6600 3800 50  0000 C CNN
@@ -122,7 +122,7 @@ Wire Wire Line
 Wire Wire Line
 	2600 3900 2650 3900
 Wire Wire Line
-	3650 4300 3650 4550
+	3650 4300 3650 4850
 Wire Wire Line
 	6600 4550 6600 4500
 Wire Wire Line
@@ -132,10 +132,10 @@ Wire Wire Line
 Wire Wire Line
 	5950 3050 5950 4550
 $Comp
-L LCD-016N002L DS?
+L LCD-016N002L LCD
 U 1 1 5946CA00
 P 8600 2350
-F 0 "DS?" H 7800 2750 50  0000 C CNN
+F 0 "LCD" H 7800 2750 50  0000 C CNN
 F 1 "LCD-016N002L" H 9300 2750 50  0000 C CNN
 F 2 "WC1602A" H 8600 2300 50  0000 C CIN
 F 3 "" H 8600 2350 50  0000 C CNN
@@ -211,14 +211,72 @@ Wire Notes Line
 Text Notes 6100 1750 0    60   ~ 0
 These two components are already unified in one single product.\nConnection between them come from my imagination.\n(Need help to get the good connection).
 $Comp
-L FINDER-32.21-x000 K?
+L FINDER-32.21-x000 RL1
 U 1 1 594776D9
 P 3450 5750
-F 0 "K?" H 3900 5900 50  0000 L CNN
+F 0 "RL1" H 3900 5900 50  0000 L CNN
 F 1 "FINDER-32.21-x000" H 3900 5800 50  0000 L CNN
 F 2 "Relays_THT:Relay_SPST_Finder_32.21-x300" H 4720 5720 50  0001 C CNN
 F 3 "" H 3450 5750 50  0001 C CNN
 	1    3450 5750
 	1    0    0    -1  
 $EndComp
+$Comp
+L Q_NPN_BCE NPN1
+U 1 1 594A1450
+P 2350 5750
+F 0 "NPN1" H 2550 5800 50  0000 L CNN
+F 1 "Q_NPN_BCE" H 2550 5700 50  0000 L CNN
+F 2 "" H 2550 5850 50  0000 C CNN
+F 3 "" H 2350 5750 50  0000 C CNN
+	1    2350 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 5950 2450 6400
+Wire Wire Line
+	2450 6400 3250 6400
+Wire Wire Line
+	3250 6400 3250 6050
+Wire Wire Line
+	3250 5450 3250 4850
+Wire Wire Line
+	3250 4850 3650 4850
+Connection ~ 3650 4550
+Wire Wire Line
+	2450 5550 2450 1450
+Wire Wire Line
+	2450 1450 3250 1450
+Wire Wire Line
+	3250 1450 3250 1700
+Wire Wire Line
+	2150 5750 2150 3500
+Wire Wire Line
+	2150 3500 2650 3500
+Wire Wire Line
+	3750 5450 3750 5250
+Wire Wire Line
+	3750 5250 5300 5250
+Wire Wire Line
+	5300 5250 5300 5800
+Wire Wire Line
+	3650 6050 3650 6300
+Wire Wire Line
+	3650 6300 5300 6300
+Wire Wire Line
+	5300 6300 5300 6150
+Text GLabel 5300 5800 2    60   Input ~ 0
+ToHeater
+Text GLabel 5300 6150 2    60   Input ~ 0
+ToHeater
+Wire Notes Line
+	1900 5100 5900 5100
+Wire Notes Line
+	5900 5100 5900 6700
+Wire Notes Line
+	5900 6700 1900 6700
+Wire Notes Line
+	1900 6700 1900 5100
+Text Notes 3750 6850 2    60   ~ 0
+Unified component. Reverse engineered.
 $EndSCHEMATC
