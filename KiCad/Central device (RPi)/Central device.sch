@@ -77,7 +77,9 @@ Wire Wire Line
 Wire Wire Line
 	5300 2300 5300 1500
 Wire Wire Line
-	5300 1500 3950 1500
+	3950 1500 5300 1500
+Wire Wire Line
+	5300 1500 5500 1500
 Wire Wire Line
 	3950 1500 3950 1700
 Wire Wire Line
@@ -122,15 +124,17 @@ Wire Wire Line
 Wire Wire Line
 	2600 3900 2650 3900
 Wire Wire Line
-	3650 4300 3650 4850
-Wire Wire Line
 	6600 4550 6600 4500
 Wire Wire Line
 	6600 3100 6600 3050
 Wire Wire Line
-	5950 3050 9250 3050
+	5950 3050 6600 3050
 Wire Wire Line
-	5950 3050 5950 4550
+	6600 3050 7950 3050
+Wire Wire Line
+	7950 3050 9250 3050
+Wire Wire Line
+	5950 4550 5950 3050
 $Comp
 L LCD-016N002L LCD1
 U 1 1 5946CA00
@@ -180,15 +184,11 @@ Wire Wire Line
 Wire Wire Line
 	9150 4100 9150 2850
 Wire Wire Line
-	5950 4550 3650 4550
+	6200 4550 6600 4550
 Wire Wire Line
-	6200 4550 9350 4550
+	6600 4550 7850 4550
 Wire Wire Line
-	3850 1700 3850 1450
-Wire Wire Line
-	3850 1450 5500 1450
-Wire Wire Line
-	5500 1450 5500 4500
+	7850 4550 9350 4550
 Wire Wire Line
 	6200 4500 6200 4550
 Connection ~ 6600 4550
@@ -233,41 +233,20 @@ F 3 "" H 2350 5750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2450 5950 2450 6400
+	2450 5950 2450 6150
 Wire Wire Line
-	2450 6400 3250 6400
+	2450 6150 3250 6150
 Wire Wire Line
-	3250 6400 3250 6050
+	3250 6150 3250 6050
 Wire Wire Line
 	3250 5450 3250 4850
-Wire Wire Line
-	3250 4850 3650 4850
-Connection ~ 3650 4550
-Wire Wire Line
-	2450 5550 2450 1450
-Wire Wire Line
-	2450 1450 3250 1450
-Wire Wire Line
-	3250 1450 3250 1700
 Wire Wire Line
 	2150 5750 2150 3500
 Wire Wire Line
 	2150 3500 2650 3500
-Wire Wire Line
-	3750 5450 3750 5250
-Wire Wire Line
-	3750 5250 5300 5250
-Wire Wire Line
-	5300 5250 5300 5800
-Wire Wire Line
-	3650 6050 3650 6300
-Wire Wire Line
-	3650 6300 5300 6300
-Wire Wire Line
-	5300 6300 5300 6150
-Text GLabel 5300 5800 2    60   Input ~ 0
+Text GLabel 5300 5500 2    60   Input ~ 0
 ToHeater
-Text GLabel 5300 6150 2    60   Input ~ 0
+Text GLabel 5300 5700 2    60   Input ~ 0
 ToHeater
 Wire Notes Line
 	1900 5100 5900 5100
@@ -319,4 +298,37 @@ NoConn ~ 8050 2850
 NoConn ~ 8150 2850
 NoConn ~ 8250 2850
 NoConn ~ 8350 2850
+Wire Wire Line
+	3650 4550 3650 4300
+Wire Wire Line
+	2450 4550 3650 4550
+Wire Wire Line
+	3650 4550 5950 4550
+Wire Wire Line
+	5500 1500 5500 4500
+Wire Wire Line
+	5500 4500 5500 4850
+Connection ~ 5300 1500
+Wire Wire Line
+	5500 4850 3250 4850
+Connection ~ 5500 4500
+Wire Wire Line
+	2450 5550 2450 4550
+Connection ~ 3650 4550
+Wire Wire Line
+	3650 6050 3650 6200
+Wire Wire Line
+	3650 6200 5000 6200
+Wire Wire Line
+	5000 6200 5000 5700
+Wire Wire Line
+	5000 5700 5300 5700
+Wire Wire Line
+	5300 5500 5000 5500
+Wire Wire Line
+	5000 5500 5000 5300
+Wire Wire Line
+	5000 5300 3750 5300
+Wire Wire Line
+	3750 5300 3750 5450
 $EndSCHEMATC
